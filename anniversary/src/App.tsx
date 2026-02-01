@@ -106,7 +106,7 @@ export default function App() {
  <br /><br />
 I’m really glad you prank called me. Even though we don’t get to talk much, hearing your voice feels like the warmest hug. I love it when you call me baba. It’s a feeling I can’t put into words, and it means more to me than you know.
  <br /><br />
-I can’t wait for all the years ahead of us. Just you and me together is my dream. I want to create millions of memories with you, share countless beautiful moments, and hold them close for the rest of our lives.
+I hope I’ve been a good boyfriend to you, because you truly deserve the best. I can’t wait for all the years ahead of us. Just you and me together is my dream. I want to create millions of memories with you, share countless beautiful moments, and hold them close for the rest of our lives.
  <br /><br />
 I love you sooo muchhh princess ❤️ You mean everything to me... Ummmmaaaa 😘😘
               <br /><br />
