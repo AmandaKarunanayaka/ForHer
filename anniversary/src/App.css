@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
+
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Overlay text */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+
+  pointer-events: none;
+}
+
+.title {
+  color: white;
+  /* Responsive Text Control */
+  font-size: 40px;
+  /* Mobile Default */
+
+  @media (min-width: 768px) {
+    font-size: 65px;
+    /* Tablet / iPad (Targeting ~60px+) */
+  }
+
+  @media (min-width: 1300px) {
+    font-size: 80px;
+    /* Desktop / Large Screen */
+  }
+
+  font-family: 'Gwendolyn',
+  cursive;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 100px;
+}
+
+/* Romantic Button */
+.romantic-button {
+  pointer-events: auto;
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-family: 'Gwendolyn', cursive;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #fd5280, #ff9a9e);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  line-height: 1.4;
+
+}
+
+.romantic-button:hover {
+  background: linear-gradient(135deg, #ff6f91, #ffb6c1);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 8px 20px rgba(253, 82, 128, 0.4),
+      0 0 30px rgba(255, 182, 193, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 8px 20px rgba(253, 82, 128, 0.6),
+      0 0 50px rgba(255, 182, 193, 0.6);
+  }
+}
+
+@media (min-width: 768px) {
+  .romantic-button {
+    font-size: 26px;
+    padding: 16px 45px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .romantic-button {
+    font-size: 16px;
+    padding: 14px 38px;
+  }
+}
+
+/* Letter Container */
+.letter-container {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.letter {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.back-button {
+  background: linear-gradient(135deg, #fd5280, #ff9a9e);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #ff6f91, #ffb6c1);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.letter-greeting {
+  font-family: 'Gwendolyn', cursive;
+  font-size: 32px;
+  color: #2c2c2c;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.letter-content {
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  color: #4a4a4a;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .letter {
+    padding: 60px;
+  }
+
+  .letter-greeting {
+    font-size: 42px;
+  }
+
+  .letter-content {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .letter {
+    padding: 50px;
+    max-width: 800px;
+  }
+
+  .letter-greeting {
+    font-size: 48px;
+  }
+
+  .letter-content {
+    font-size: 26px;
+  }
+}
