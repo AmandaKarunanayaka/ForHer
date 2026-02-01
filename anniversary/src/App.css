@@ -183,9 +183,10 @@
 }
 
 @media (max-width: 480px) {
-  .letter-container {}
   .letter {
     padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .letter-greeting {
@@ -200,6 +201,8 @@
 @media (min-width: 768px) {
   .letter {
     padding: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .letter-greeting {
@@ -215,6 +218,8 @@
   .letter {
     padding: 50px;
     max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .letter-greeting {
