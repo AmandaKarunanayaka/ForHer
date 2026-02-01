@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
+:root {
+  /* Reserved space for title + button so flowers never overlap */
+  --ui-safe-top: clamp(150px, 22vh, 260px);
+}
 
 .app {
   position: relative;
@@ -176,6 +180,18 @@
   color: #4a4a4a;
   line-height: 1.8;
   margin: 0;
+}
+
+@media (max-width: 480px) {
+  .letter-container {}
+
+  .letter-greeting {
+    font-size: 22px;
+  }
+
+  .letter-content {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 768px) {

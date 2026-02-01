@@ -52,28 +52,6 @@ body {
         linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
 }
 
-.flowers {
-    // --- CONTROL CENTER ---
-    // Adjust these values to control flower size per device
-    --scale-mobile: 0.9;
-    --scale-tablet: 1.0; // Targets iPad/1024px
-    --scale-desktop: 0.6; // Targets large monitors
-    // ----------------------
-
-    position: relative;
-    transform: scale(var(--scale-mobile));
-
-    // Tablet / iPad Range (includes 1024px)
-    @media (min-width: 768px) {
-        transform: scale(var(--scale-tablet));
-    }
-
-    // Desktop Monitor Range
-    @media (min-width: 1300px) {
-        transform: scale(var(--scale-desktop));
-    }
-}
-
 .flower {
     position: absolute;
     bottom: 10vmin;
@@ -1377,40 +1355,63 @@ body {
    =============================== */
 
 :root {
-  --bg-start: #fb5f86;
-  --bg-end: #ffc5ef;
+    --bg-start: #fb5f86;
+    --bg-end: #ffc5ef;
 }
 
 .night {
-  min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    var(--bg-start),
-    var(--bg-end)
-  );
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            var(--bg-start),
+            var(--bg-end));
 }
 
 /* Petals */
 .flower__leaf {
-  background-image: linear-gradient(to top, #fd5280, #fcbac9);
+    background-image: linear-gradient(to top, #fd5280, #fcbac9);
 }
 
 /* Flower center glow */
 .flower__white-circle::after {
-  background-image: linear-gradient(90deg, #ffcc70, #ff9a9e);
+    background-image: linear-gradient(90deg, #ffcc70, #ff9a9e);
 }
 
 /* Stem softer green */
 .flower__line {
-  background-image: linear-gradient(to top, #2f8f6b, #6dd6a6);
+    background-image: linear-gradient(to top, #2f8f6b, #6dd6a6);
 }
 
 /* Floating lights */
 .flower__light {
-  background-color: #ffb6c1;
-  filter: blur(0.4vmin);
+    background-color: #ffb6c1;
+    filter: blur(0.4vmin);
 }
 
 .flower__light:nth-child(odd) {
-  background-color: #ff6f91;
+    background-color: #ff6f91;
+}
+
+.flowers {
+    // --- CONTROL CENTER ---
+    --scale-mobile: 1.2;
+    --scale-tablet: 0.8; // Targets iPad/1024px
+    --scale-desktop: 0.6; // Targets large monitors
+    // ----------------------
+
+    position: relative;
+    transform: scale(var(--scale-mobile));
+
+    // Tablet / iPad Range (includes 1024px)
+    @media (min-width: 768px) {
+        transform: scale(var(--scale-tablet));
+    }
+
+    @media (min-width: 375px) {
+        transform: scale(var(--scale-tablet));
+    }
+
+    // Desktop Monitor Range
+    @media (min-width: 1300px) {
+        transform: scale(var(--scale-desktop));
+    }
 }
